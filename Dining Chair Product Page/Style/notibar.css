@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.ntb {
+    max-width: 100%;
+    height: 39px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    padding: 0 5%;
+}
+
+.ntfp {
+    font-size: 12px;
+    line-height: 14.52px;
+    white-space: nowrap;
+    overflow: hidden;
+    gap: 15px;
+}
+
+.ntli {
+    gap: 5px;
+}
+
+@media screen and (max-width: 760px) {
+    .dn{
+        display: none;
+    }
+    .ntfp{
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 9.39px;
+        padding-left: 5px;
+    }
+    .ntli img{
+        width: 9.47px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .ntb{
+        padding: 0;
+    }
+}

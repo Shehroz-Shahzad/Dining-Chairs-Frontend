@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        section {
+            margin: 3%;
+        }
+
+        .swiper {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 40%;
+            gap: 10px;
+        }
+
+        .productImage {
+            width: 100%;
+            gap: 10px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overscroll-behavior: auto;
+        }
+
+        .productImage div {
+            flex: 0 0 98%;
+        }
+
+        .productAllImages {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 5px;
+        }
+
+        .productAllImages div {
+            flex: 0 0 18.2%;
+            cursor: pointer;
+            opacity: 50%;
+        }
+
+        .productAllImages div:hover {
+            flex: 0 0 18.2%;
+            opacity: 100%;
+        }
+
+        .productAllImages div.selected {
+            opacity: 1;
+        }
+
+        .productImage::-webkit-scrollbar,
+        .productAllImages::-webkit-scrollbar {
+            overflow: hidden;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #EBB64A;
+            position: absolute;
+            top: 40%;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .swiper-button-prev {
+            right: auto;
+            left: 1%;
+        }
+
+        .swiper-button-next {
+            right: 2%;
+            left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="swiper">
+                <div part="button-prev" class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
+                    aria-label="Previous slide" aria-controls="swiper-wrapper-cee7b547d1be913b" aria-disabled="true">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.409 15.922C11.409 10.855 4.30395 8.67 0.751953 8.211C4.30395 7.752 11.409 5.567 11.409 0.5M0.951953 8.211H19.5"
+                            stroke="white" stroke-width="2" />
+                    </svg>
+                </div>
+                <div part="button-next" class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+                    aria-controls="swiper-wrapper-cee7b547d1be913b" aria-disabled="false">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.591 15.922C8.591 10.855 15.7 8.67 19.248 8.211C15.7 7.752 8.591 5.567 8.591 0.5M19.051 8.211H0.5"
+                            stroke="white" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="productImage">
+                    <div><img src="/Images/image 18.png" alt=""></div>
+                    <div><img src="/Images/image 18.png" alt=""></div>
+                    <div><img src="/Images/image 18.png" alt=""></div>
+                    <div><img src="/Images/image 18.png" alt=""></div>
+                    <div><img src="/Images/image 18.png" alt=""></div>
+                    <div><img src="/Images/image 18.png" alt=""></div>
+                    <div><img src="/Images/image 18.png" alt=""></div>
+                    <div><img src="/Images/image 18.png" alt=""></div>
+                </div>
+            <div class="productAllImages">
+                <div><img src="/Images/image 18.png" alt=""></div>
+                <div><img src="/Images/image 18.png" alt=""></div>
+                <div><img src="/Images/image 18.png" alt=""></div>
+                <div><img src="/Images/image 18.png" alt=""></div>
+                <div><img src="/Images/image 18.png" alt=""></div>
+                <div><img src="/Images/image 18.png" alt=""></div>
+                <div><img src="/Images/image 18.png" alt=""></div>
+                <div><img src="/Images/image 18.png" alt=""></div>
+                <div><img src="/Images/image 18.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get references to the image containers and scroll container
+            const productImage = document.querySelector(".productImage div img");
+            const productAllImages = document.querySelector(".productAllImages");
+            const productAllImagesDivs = document.querySelectorAll(".productAllImages div img");
+
+            // Add click event listeners to the images in productAllImages
+            productAllImagesDivs.forEach(function (image, index) {
+                image.addEventListener("click", function () {
+                    // Remove the "selected" class from all images
+                    productAllImagesDivs.forEach(function (img) {
+                        img.parentElement.classList.remove("selected");
+                    });
+
+                    // Update the main productImage with the clicked image's source
+                    productImage.src = image.src;
+
+                    // Add the "selected" class to the clicked image's parent div
+                    image.parentElement.classList.add("selected");
+
+                    // Scroll the container to the position of the selected image
+                    productAllImages.scrollTo({
+                        left: image.parentElement.offsetLeft - (productAllImages.clientWidth - image.parentElement.clientWidth) / 2,
+                        behavior: 'smooth' // You can change this to 'auto' if you don't want smooth scrolling
+                    });
+                });
+            });
+        });
+
+        const prevButton = document.querySelector('.swiper-button-prev');
+        const nextButton = document.querySelector('.swiper-button-next');
+        const productImage = document.querySelector('.productImage');
+        const productAllImages = document.querySelectorAll('.productAllImages div');
+        let currentIndex = 0;
+
+        function updateImage(index) {
+            currentIndex = index;
+            productAllImages.forEach((thumbnail, i) => thumbnail.classList.toggle('selected', i === currentIndex));
+            productImage.scrollTo(currentIndex * productImage.clientWidth, 0);
+        }
+
+        prevButton.addEventListener('click', () => updateImage(Math.max(0, currentIndex - 1)));
+        nextButton.addEventListener('click', () => updateImage(Math.min(productAllImages.length - 1, currentIndex + 1)));
+        productAllImages.forEach((thumbnail, index) => thumbnail.addEventListener('click', () => updateImage(index)));
+    </script>
+</body>
+
+</html>

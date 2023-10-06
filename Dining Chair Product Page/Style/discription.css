@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.discr{
+    margin: 3%;
+    font-family: 'Inter', sans-serif;
+}
+.dis-btn button{
+    width: 135px;
+    height: 52px;
+    border: 1px solid #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 0;
+}
+.dis-opt-btn{
+    display: none;
+}
+.dis-opt-btn select{
+    background: #E9F2F9;
+    width: 135px;
+    height: 52px;
+    border: 1px solid #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 0;
+}
+
+.dis-text{
+    background-color: #E9F2F9;
+}
+.dis-text h4{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    padding-top: 30px;
+    margin: 0 0 10px 24px;
+}
+.dis-text p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 0 0 24px;
+    color: #6F6F6F;
+}
+
+.active {
+    background-color: #E9F2F9; /* Change this to the desired background color */
+    
+}
+@media screen and (max-width: 444px) {
+    .dis-btn{
+        display: none;
+    }
+    .dis-opt-btn{
+        display: block;
+    }
+}

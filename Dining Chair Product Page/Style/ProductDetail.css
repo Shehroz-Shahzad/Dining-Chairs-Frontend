@@ -1,0 +1,424 @@
+body {
+    position: relative;
+}
+
+.pd {
+    gap: 5%;
+    margin: 3%;
+}
+
+.cont{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.pg {
+    flex: 1 1 40%;
+    position: relative;
+    width: 530px;
+    height: 570px;
+}
+
+.pdbtns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 50%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #EBB64A;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+}
+
+swiper-container {
+    width: 530px;
+    height: 464px;
+    border: 2px solid #D4D4D4;
+    border-radius: 5px;
+
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    color: #000;
+}
+
+swiper-container {
+    width: 500px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper {
+    width: 530px;
+    height: 464px;
+    border: 2px solid #D4D4D4;
+    border-radius: 5px;
+
+}
+
+.mySwiper2 {
+    width: 530px;
+    height: 90px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.mySwiper2 swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper2 .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*=====================================================================================================================*/
+/*================================================ Product All Details ================================================*/
+/*=====================================================================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&display=swap');
+
+.ptd {
+    font-family: 'DM Serif Display', serif;
+    flex: 2 1 60%;
+}
+
+.rating {
+    width: 192px;
+    height: 27px;
+}
+
+.ptd-h {
+    width: 439px;
+    margin: 8px 0;
+}
+
+.ptd-h p {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38.39px;
+}
+
+.hb {
+    color: #858685;
+}
+
+.pa {
+    display: flex;
+    align-items: center;
+    gap: 6%;
+    margin: 8px 0;
+}
+
+.price {
+    font-family: 'Inter', sans-serif;
+    color: #EE2D00;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.circle {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #52AF3C;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+
+.avail {
+    display: flex;
+    flex-direction: column;
+}
+
+.avail::after {
+    content: "";
+    width: 240px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #52AF3C;
+}
+
+.p1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #52AF3C;
+}
+
+.p2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #A5A5A5;
+}
+
+.p2 span {
+    color: #858685;
+}
+
+.text {
+    margin: 8px 0;
+}
+
+.text ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #4D4D4D;
+}
+
+.text li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.grc {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #4D4D4D;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+
+.warranty {
+    margin: 25px 0;
+}
+
+.wul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wul li {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.44px;
+    gap: 3%;
+}
+
+/*=====================================================================================================================*/
+/*================================================   Quantity Button   ================================================*/
+/*=====================================================================================================================*/
+
+.btns {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 35px;
+}
+
+.quan p {
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+
+}
+
+.counter {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.counter input {
+    width: 109px;
+    height: 56px;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    appearance: none;
+    outline: 0;
+    border: 1px solid #707070;
+}
+
+.counter span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #707070;
+    width: 54px;
+    height: 56px;
+}
+
+.ship-cal {
+    display: flex;
+    align-items: center;
+    font-family: 'Inter';
+}
+
+.ship-cal a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #313131;
+    margin-left: 3px;
+    text-decoration: 2px solid underline #313131;
+}
+
+.addCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addBtn {
+    width: 398px;
+    height: 60px;
+    background: #52AF3C;
+    border: 0;
+}
+
+.addBtn p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.48px;
+    color: #FFFFFF;
+}
+
+.badges {
+    margin: 20px 0;
+}
+
+.play {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.playOption {
+    margin: 10px 0;
+}
+
+.playBar {
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #313131;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+}
+
+.playBar::after,
+.playBar::before {
+    display: flex;
+    content: "";
+    width: 106px;
+    height: 2px;
+    background-color: #979797;
+    border-radius: 1px;
+}
+
+.options {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 50px;
+}
+
+.o div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.o p {
+    font-family: 'Inter';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.5px;
+    margin: 10px 0;
+}
+
+
+@media screen and (max-width: 760px) {
+    .pd {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .pg {
+        margin-bottom: 10px;
+    }
+
+    .ptd {
+        margin: 20px 0;
+    }
+
+    .btns {
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .playBar{
+        justify-content: center;
+    }
+    .options{
+        justify-content: space-around;
+    }
+}

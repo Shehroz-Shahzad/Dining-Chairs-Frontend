@@ -1,0 +1,116 @@
+.reviews {
+    margin: 4%;
+    font-family: 'Inter';
+}
+
+.reviews h1 {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: #52AF3C;
+    margin: 20px 0;
+}
+
+.reviews p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.44px;
+}
+
+.reviews h1::after {
+    color: #52AF3C;
+    content: "";
+    border: 2px solid #52AF3C;
+    width: 140px;
+    margin: 10px 0;
+}
+
+.review-main, #to-move {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: space-between;
+    position: relative;
+}
+
+.view-card {
+    width: 23%;
+    flex: 0 0 22%;
+    height: auto;
+    background-color: aliceblue;
+    border: 1px black;
+    margin: 0% 1% 25px 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.view-card div {
+    margin: 15px 10px;
+}
+
+.date {
+    text-align: end;
+}
+
+.dis-img img {
+    margin: 20px 0;
+}
+
+.dis-img p {
+    color: #6F6F6F;
+}
+
+.name span{
+    color: rgb(75, 75, 255);
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.country{
+    display: flex;
+    gap: 10px;
+}
+
+
+.review-button-prev,
+.review-button-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #EBB64A;
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.review-button-prev {
+    right: auto;
+    left: 0%;
+}
+
+.review-button-next {
+    right: 0%;
+    left: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#to-move::-webkit-scrollbar {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 760px) {
+    .view-card {
+        flex: 0 0 48%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .view-card {
+        flex: 0 0 100%;
+    }
+}

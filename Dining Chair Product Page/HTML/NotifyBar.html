@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style/Main.css">
+    <link rel="stylesheet" href="/Style/notibar.css">
+    <title>Document</title>
+    <style>
+        .ntb {
+            position: relative;
+            flex-direction: row;
+            overflow: hidden;
+            color: white;
+        }
+
+        .scroll-notify {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            /* Starting position */
+            transform: translateX(100%);
+            /* Apply animation to this element */
+            animation: scroll-left 40s linear infinite;
+        }
+
+        /* Move it (define the animation) */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ntb">
+        <div class="scroll-notify">
+            <ul class="ntfp fxr">
+                <li class="ntli fxr">
+                    <img src="/Images/Group 99319.png" alt="">
+                    <p>LIFE TIME WARRANTY</p>
+                </li>
+                <li class="ntli fxr">
+                    <img src="/Images/Group 99320.png" alt="">
+                    <p>Regular Wear & Tear Coverage</p>
+                </li>
+                <li class="ntli fxr">
+                    <img src="/Images/Group 99321.png" alt="">
+                    <p>Quality Money Back Guarantee</p>
+                </li>
+            </ul>
+
+
+            <ul class="ntfp fxr">
+                <li class="ntli fxr">
+                    <img src="/Images/call.png" alt="">
+                    <p>CALL US: 1300-303-764</p>
+                </li>
+                <li class="ntli fxr">
+                    <img src="/Images/email.png" alt="">
+                    <p>support@onlydiningchairs.com.au</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

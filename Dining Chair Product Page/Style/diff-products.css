@@ -1,0 +1,57 @@
+
+.diff-pro{
+    font-family: 'DM Serif Display', serif;
+    margin: 3%;
+}
+.dif-pro-main h1{
+    margin: 55px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 46.61px;
+
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.f1{
+    width: 488px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    margin: 2%;
+}
+
+.card-img{
+    border-radius: 8px;
+}
+
+.card-disc h4{
+    color: #1E3851;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 27px;
+    margin: 20px;
+}
+
+.card-disc p{
+    color: #393939;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 20px;
+}
+
+@media screen and (max-width: 760px) {
+    .dif-pro-main h1{
+        font-size: 28px;
+    }
+}

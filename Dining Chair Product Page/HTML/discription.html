@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Change</title>
+    <link rel="stylesheet" href="/Style/discription.css">
+    <link rel="stylesheet" href="/Style/Main.css">
+    <style>
+        /* Define the initial color for the buttons */
+    </style>
+</head>
+
+<body>
+    <section class="discr">
+        <div>
+            <div class="dis-btn">
+                <button type="button" class="change-color"
+                    onclick="changeContent('Elegantly Curvy:', 'This modern velvet dining chair is perfect for your home. It has a sleek and elegant seat profile, making it the best choice to enhance any room of the house. The slight backward curve-hugging design will make you want to stay seated around that dinner table hours after your meal! Add a beautiful touch of modern style to your home with these stunning velvet dining chairs. Eye- catchy, ultra-stylish and exceptionally comfortable aesthetics define this modern design that seamlessly matches any dining theme. With sleek contours designed to ensure maximum comfort while sitting, its no wonder why this high-quality ergonomic piece has become so popular among homeowners who want nothing but the best when furnishing their living space! Add to Cart now and add this timeless dining flair to your home today!')">Description</button>
+                <button type="button" class="change-color" onclick="changeContent('Size:', 'Dimensions:')">Size</button>
+                <button type="button" class="change-color"
+                    onclick="changeContent('Shipping:', 'Ships within 3-5 business days')">Shipping</button>
+                <button type="button" class="change-color"
+                    onclick="changeContent('Showroom:', 'Visit our showroom located at 123 Main St.')">Showroom</button>
+                <button type="button" class="change-color"
+                    onclick="changeContent('Policies:', 'Return Policy: 30-day return period')">Policies</button>
+            </div>
+            <div class="dis-opt-btn">
+                <select name="" id="">
+                    <option value="" class="change-color" onclick="changeContent('Elegantly Curvy:', 'This modern velvet dining chair is perfect for your home. It has a sleek and elegant seat profile, making it the best choice to enhance any room of the house. The slight backward curve-hugging design will make you want to stay seated around that dinner table hours after your meal! Add a beautiful touch of modern style to your home with these stunning velvet dining chairs. Eye- catchy, ultra-stylish and exceptionally comfortable aesthetics define this modern design that seamlessly matches any dining theme. With sleek contours designed to ensure maximum comfort while sitting, its no wonder why this high-quality ergonomic piece has become so popular among homeowners who want nothing but the best when furnishing their living space! Add to Cart now and add this timeless dining flair to your home today!')">Description</option>
+                    <option value="" class="change-color" onclick="changeContent('Size:', 'Dimensions:')">Size</option>
+                    <option value="" class="change-color" onclick="changeContent('Shipping:', 'Ships within 3-5 business days')">Shipping</option>
+                    <option value="" class="change-color" onclick="changeContent('Showroom:', 'Visit our showroom located at 123 Main St.')">Showroom</option>
+                    <option value="" class="change-color" onclick="changeContent('Policies:', 'Return Policy: 30-day return period')">Policies</option>
+                </select>
+            </div>
+            <article class="dis-text">
+                <h4 id="dynamic-heading">Elegantly Curvy:</h4>
+                <p id="dynamic-description">This modern velvet dining chair is perfect for your home. It has a sleek and
+                    elegant seat profile, making it the best choice to enhance any room of the house. The slight
+                    backward curve-hugging design will make you want to stay seated around that dinner table hours after
+                    your meal! Add a beautiful touch of modern style to your home with these stunning velvet dining
+                    chairs. Eye- catchy, ultra-stylish and exceptionally comfortable aesthetics define this modern
+                    design that seamlessly matches any dining theme. With sleek contours designed to ensure maximum
+                    comfort while sitting, it's no wonder why this high-quality ergonomic piece has become so popular
+                    among homeowners who want nothing but the best when furnishing their living space! Add to Cart now
+                    and add this timeless dining flair to your home today!</p>
+            </article>
+        </div>
+    </section>
+
+    <script>
+        function changeContent(newHeading, newDescription) {
+            // Update the heading and description based on the button clicked
+            document.getElementById('dynamic-heading').textContent = newHeading;
+            document.getElementById('dynamic-description').textContent = newDescription;
+            // Reset the background color for all buttons
+            const buttons = document.querySelectorAll('.change-color');
+            buttons.forEach(button => {
+                button.style.backgroundColor = '#FFFFFF'; // Reset to the initial color
+            });
+            // Change the background color of the clicked button
+            event.target.style.backgroundColor = '#E9F2F9'; // Change to the desired color
+        }
+        
+    </script>
+</body>
+
+</html>

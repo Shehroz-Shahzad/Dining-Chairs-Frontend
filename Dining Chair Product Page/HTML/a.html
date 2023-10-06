@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function toggleAnswer(answerId, iconId) {
+            var answerElement = document.getElementById(answerId);
+            var iconElement = document.getElementById(iconId);
+            if (answerElement.style.display === 'block' || answerElement.style.display === '') {
+                answerElement.style.display = 'none';
+                iconElement.setAttribute('d', 'M12.5 0.5893557C10.0277 0.5893557 7.61099 1.32247 5.55538 2.69599C3.49976 4.0695 1.89761 6.02174 0.951511 8.30581C0.00541604 10.5899 -0.242126 13.1032 0.24019 15.528C0.722505 17.9527 1.91301 20.18 3.66117 21.9282C5.40933 23.6763 7.63661 24.8669 10.0614 25.3492C12.4861 25.8315 14.9995 25.5839 17.2835 24.6378C19.5676 23.6918 21.5199 22.0896 22.8934 20.034C24.2669 17.9784 25 15.5616 25 13.0894C25 11.4478 24.6767 9.82238 24.0485 8.30581C23.4203 6.78924 22.4996 5.41125 21.3388 4.25052C20.1781 3.08979 18.8001 2.16905 17.2835 1.54086C15.767 0.912678 14.1415 0.5893557 12.5 0.5893557Z');
+            } else {
+                answerElement.style.display = 'block';
+                iconElement.setAttribute('d', 'M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="QandA">
+        <div class="QandA-p">
+            <p>What Is The Estimated Delivery Time?</p>
+            <svg  width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleAnswer('answer1', 'icon1')">
+                <path 
+                    id="icon1"
+                    d="M12.5 0.589355C10.0277 0.589355 7.61099 1.32247 5.55538 2.69599C3.49976 4.0695 1.89761 6.02174 0.951511 8.30581C0.00541604 10.5899 -0.242126 13.1032 0.24019 15.528C0.722505 17.9527 1.91301 20.18 3.66117 21.9282C5.40933 23.6763 7.63661 24.8669 10.0614 25.3492C12.4861 25.8315 14.9995 25.5839 17.2835 24.6378C19.5676 23.6918 21.5199 22.0896 22.8934 20.034C24.2669 17.9784 25 15.5616 25 13.0894C25 11.4478 24.6767 9.82238 24.0485 8.30581C23.4203 6.78924 22.4996 5.41125 21.3388 4.25052C20.1781 3.08979 18.8001 2.16905 17.2835 1.54086C15.767 0.912678 14.1415 0.5893557 12.5 0.5893557Z"
+                    fill="black" />
+            </svg>
+        </div>
+        <div id="answer1" style="display: none;">
+            <p>The estimated delivery time is within 5-7 business days.</p>
+        </div>
+        <hr>
+        <div class="QandA-p">
+            <p>What Are The Payment Options Which You Provide?</p>
+            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleAnswer('answer2', 'icon2')">
+                <path
+                    id="icon2"
+                    d="M12.5 0.589355C10.0277 0.589355 7.61099 1.32247 5.55538 2.69599C3.49976 4.0695 1.89761 6.02174 0.951511 8.30581C0.00541604 10.5899 -0.242126 13.1032 0.24019 15.528C0.722505 17.9527 1.91301 20.18 3.66117 21.9282C5.40933 23.6763 7.63661 24.8669 10.0614 25.3492C12.4861 25.8315 14.9995 25.5839 17.2835 24.6378C19.5676 23.6918 21.5199 22.0896 22.8934 20.034C24.2669 17.9784 25 15.5616 25 13.0894C25 11.4478 24.6767 9.82238 24.0485 8.30581C23.4203 6.78924 22.4996 5.41125 21.3388 4.25052C20.1781 3.08979 18.8001 2.16905 17.2835 1.54086C15.767 0.912678 14.1415 0.5893557 12.5 0.5893557Z"
+                    fill="black" />
+            </svg>
+        </div>
+        <div id="answer2" style="display: none;">
+            <p>We provide three main payment options: credit cards, debit cards, and cash.</p>
+        </div>
+        <hr>
+    </div>
+</body>
+</html>
